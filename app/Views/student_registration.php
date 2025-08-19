@@ -92,7 +92,7 @@
 
         <h2>Register New Student</h2>
         <form action="/students/create" method="post">
-            <?= csrf_field() ?> <!-- Important for security -->
+            <?= csrf_field() ?> 
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -140,7 +140,7 @@
                             <td><?= esc($student['name']) ?></td>
                             <td><?= esc($student['email']) ?></td>
                             <td class="actions">
-                                <a href="#">View</a>
+                                <a href="/students/view/<?= esc($student['id']) ?>">View</a>
                                 <a href="/students/delete/<?= esc($student['id']) ?>" class="delete"
                                     onclick="return confirm('Are you sure you want to delete this student?');">Delete</a>
                             </td>
