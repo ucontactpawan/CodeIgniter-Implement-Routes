@@ -34,18 +34,15 @@ class Students extends BaseController
         return redirect()->to('/students');
     }
 
-    public function delete($id = null)
+      public function delete($id = null)
     {
-
-
-        if ($id!= 2) {
-            return "Access Denied: You do not have permission to delete students.";
-        }
         $studentModel = new StudentModel();
 
         if ($id !== null) {
             $studentModel->delete($id);
+            session()->setFlashdata('success', 'Student deleted successfully.');
         }
+        
         return redirect()->to('/students');
     }
 
