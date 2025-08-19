@@ -1,3 +1,6 @@
+#project screenshot
+<img width="1905" height="905" alt="image" src="https://github.com/user-attachments/assets/083faf42-edcc-452b-9b69-7d62e63c53aa" />
+
 # CodeIgniter 4 Application Starter
 
 ## What is CodeIgniter?
